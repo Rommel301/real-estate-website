@@ -214,3 +214,26 @@ function sendEmail(event) {
             console.error('EmailJS Error:', error);
         });
 }
+
+
+    // ============================================================
+    // BACK TO TOP BUTTON
+    // ============================================================
+    const backToTop = document.getElementById("back-to-top");
+
+    if (backToTop) {
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 400) {
+                backToTop.classList.add("visible");
+            } else {
+                backToTop.classList.remove("visible");
+            }
+        });
+
+        backToTop.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
