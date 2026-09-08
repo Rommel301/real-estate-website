@@ -2558,3 +2558,54 @@ address {
         font-size: 1rem;
     }
 }
+
+
+
+/* =========================================================
+   LOCATION MAP
+========================================================= */
+
+.location-map {
+    background: var(--white);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  /* PALITAN: min-height → height */
+}
+
+.section-heading {
+    padding: 60px 20px 30px;
+    text-align: center;
+    flex-shrink: 0;  /* IDAGDAG: para hindi lumiit ang heading */
+}
+
+.map-wrapper {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;  /* IDAGDAG: para ma-stretch ang iframe */
+    align-items: stretch;  /* IDAGDAG: i-stretch ang iframe */
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;  /* 100% ng wrapper */
+    border: 0;
+    display: block;
+    flex: 1;  /* IDAGDAG: para kunin lahat ng space */
+}
+
+/* Para sa mobile */
+@media (max-width: 768px) {
+    .location-map {
+        height: 100vh;  /* same height sa mobile */
+    }
+    
+    .section-heading {
+        padding: 40px 20px 20px;
+    }
+}
